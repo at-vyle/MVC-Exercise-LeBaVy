@@ -24,7 +24,10 @@ switch ($action) {
         require('view/add.php');
         break;
     case 'store':
-        $objBook = new Book('', $_POST['name'], $_POST['author'], $_POST['year']);
+        $objBook = new Book('',
+                            mysqli_real_escape_string($conn, $_POST['name']),
+                            mysqli_real_escape_string($conn, $_POST['author']),
+                            mysqli_real_escape_string($conn, $_POST['year']));
         $result = $objBook->store();
         if($result == 1){
             $listBooks = $objBook->all();
@@ -38,7 +41,10 @@ switch ($action) {
         require('view/edit.php');
         break;
     case 'update':
-        $objBook = new Book($_POST['id'], $_POST['name'], $_POST['author'], $_POST['year']);
+        $objBook = new Book(mysqli_real_escape_string($conn, $_POST['id']),
+                            mysqli_real_escape_string($conn, $_POST['name']),
+                            mysqli_real_escape_string($conn, $_POST['author']),
+                            mysqli_real_escape_string($conn, $_POST['year']));
         $result = $objBook->update();
         if($result == 1){
             $listBooks = $objBook->all();
