@@ -25,18 +25,15 @@
 					<div class="label-name"><label>Year:</label></div>
 					<div class="input-name"><input type="text" name="year" value="<?= $objBook->getYear() ?>" required></div>
 				</div>
-				
 				<div class="form-group" style="padding-left: 123px;">
-				
 					<div class="button-sub"><input class="button-name" type="submit" value="Update"></div>
 					
 					<div class="button-res"><input class="button-name" type="reset" value="Reset"></div>
 				</div>
 
 			</form>
-
 		</div>
-		</div>
-    </div>
-    </body>
-    </html>
+	</div>
+</div>
+</body>
+</html>

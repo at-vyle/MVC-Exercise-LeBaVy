@@ -9,7 +9,7 @@
 </head>
 <?php
 $msg;
-if(isset($_REQUEST['msg'])){
+if(isset($_REQUEST['msg'])) {
 	switch ($_REQUEST['msg']) {
 		case 1:
 			# code...
@@ -26,7 +26,7 @@ if(isset($_REQUEST['msg'])){
 	}
 }
 $err;
-if(isset($_REQUEST['err'])){
+if(isset($_REQUEST['err'])) {
 	switch ($_REQUEST['err']) {
 		case 3:
 			# code...
@@ -80,14 +80,14 @@ if(isset($_REQUEST['err'])){
 								$year =$value->getYear();
 								?>
 								<tr>
-										<td class="value"><?= $id ?></td>
-										<td class="value"><?= $name; ?></td>
-										<td class="value"><?= $author; ?></td>
-										<td class="value"><?= $year; ?></td>
-										<td style="text-align: center;">
-											<a href="?action=edit&id=<?= $id ?>" style='margin-right: 44px;'><i class='far fa-edit fa-lg'></i></a>
-											<a href="?action=delete&id=<?= $id ?>"><i class='far fa-trash-alt fa-lg'></i></a>
-										</td>
+									<td class="value"><?= $id ?></td>
+									<td class="value"><?= $name; ?></td>
+									<td class="value"><?= $author; ?></td>
+									<td class="value"><?= $year; ?></td>
+									<td style="text-align: center;">
+										<a href="?action=edit&id=<?= $id ?>" style='margin-right: 44px;'><i class='far fa-edit fa-lg'></i></a>
+										<a href="?action=delete&id=<?= $id ?>"><i class='far fa-trash-alt fa-lg'></i></a>
+									</td>
 								</tr>
 						<?php 
 							}
@@ -99,10 +99,7 @@ if(isset($_REQUEST['err'])){
 					</div>
 				</form>
 			</div>
-			
-			
-
 		</div>
     </div>
-    </body>
-    </html>
+</body>
+</html>

@@ -10,7 +10,6 @@
 <body bgcolor="#E6E6FA">
 	<div class="wrapper">
 		<div class="container">
-
 			<form class="add-form" action="?action=store" method="post">
 				<div class="block-title"><h2>Add Book</h2></div>
 				<div class="form-group">
@@ -28,15 +27,13 @@
 				
 				<div class="form-group" style="padding-left: 123px;">
 				
-					<div class="button-sub"><input class="button-name" type="submit" value="Add""></div>
+					<div class="button-sub"><input class="button-name" type="submit" value="Add"></div>
 					
 					<div class="button-res"><input class="button-name" type="reset" value="Reset"></div>
 				</div>
-
 			</form>
-
 		</div>
-		</div>
-    </div>
-    </body>
-    </html>
+	</div>
+</div>
+</body>
+</html>

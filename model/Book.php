@@ -11,8 +11,10 @@ class Book
 	private $year;
 
 	/**
-	 * Construct , copy in internet :)))
-	 */
+     * Create a new controller instance.
+     *
+     * @return void
+     */
 	public function __construct()
 	{
 		$argv = func_get_args();
@@ -23,11 +25,13 @@ class Book
             case 4:
                 self::__construct2($argv[0], $argv[1], $argv[2], $argv[3]);
                 break;
-         }
+        }
 	}
 
 	/**
 	 * Construct default
+	 * 
+	 * @return void
 	 */
 	public function __construct1()
 	{
@@ -36,6 +40,8 @@ class Book
 	
 	/**
 	 * Construct 4 parameters
+	 * 
+	 * @return void
 	 */
 	public function __construct2($id, $name, $author, $year)
 	{
@@ -47,6 +53,8 @@ class Book
 
 	/**
 	 * Get list all of books
+	 * 
+	 * @return array
 	 */ 
 	public function all()
 	{
@@ -66,6 +74,8 @@ class Book
 
 	/**
 	 * Create a book, store into database
+	 * 
+	 * @return integer
 	 */ 
 	public function store()
 	{
@@ -80,6 +90,10 @@ class Book
 
 	/**
 	 * Get a book by id
+	 * 
+	 * @param integer $id
+	 * 
+	 * @return object
 	 */ 
 	public function find($id)
 	{
@@ -97,6 +111,8 @@ class Book
 
 	/**
 	 * Update a book
+	 * 
+	 * @return integer
 	 */ 
 	public function update()
 	{
@@ -111,6 +127,11 @@ class Book
 
 	/**
 	 * Delete a book by id
+	 * 
+	 * @param integer $id
+	 * 
+	 * @return integer
+	 * 
 	 */ 
 	public function delete($id)
 	{
@@ -125,6 +146,10 @@ class Book
 
 	/**
 	 * Search books
+	 * 
+	 * @param string @keyword
+	 * 
+	 * @return array
 	 */ 
 	public function search($keyword)
 	{
@@ -253,6 +278,4 @@ class Book
 		return $this->getId() . ", ". $this->getName().", ".$this->getAuthor(). ", ".$this->getYear()."\n";
 	}
 }
-
-
-    
+  
