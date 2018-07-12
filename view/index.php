@@ -62,42 +62,40 @@ if(isset($_REQUEST['err'])) {
 						<button type="submit" class="add-button"><i class="fas fa-plus fa-lg"></i><span class="tag-name">Search book</span></button>
 					</div>
 				</form>
-				<form class="del-form" action="xulyxoaallnhanvien.php" method="post">
-					<table class="table" border="1px" width="100%" align="center">
-						<tr>
-							<th class="label">ID</th>
-							<th class="label">Name</th>
-							<th class="label">Author</th>
-							<th class="label">Year</th>
-							<th class="label">Action</th>
-						</tr>
-						<?php 
-                            foreach($listBooks as $key => $value)
-                            {
-								$id=$value->getId();
-								$name =$value->getName();
-								$author =$value->getAuthor();
-								$year =$value->getYear();
-								?>
-								<tr>
-									<td class="value"><?= $id ?></td>
-									<td class="value"><?= $name; ?></td>
-									<td class="value"><?= $author; ?></td>
-									<td class="value"><?= $year; ?></td>
-									<td style="text-align: center;">
-										<a href="?action=edit&id=<?= $id ?>" style='margin-right: 44px;'><i class='far fa-edit fa-lg'></i></a>
-										<a href="?action=delete&id=<?= $id ?>"><i class='far fa-trash-alt fa-lg'></i></a>
-									</td>
-								</tr>
-						<?php 
-							}
-						 ?>
-
-					</table>
-					<div id="del-all" style="display: none;" class="add-div">
-						<button class="add-button" style="width: 122px" ><i class="fas fa-trash fa-lg"></i><span class="tag-name">Xóa tất cả</span></button>
-					</div>
-				</form>
+				<table class="table" border="1px" width="100%" align="center">
+					<tr>
+						<th class="label">ID</th>
+						<th class="label">Name</th>
+						<th class="label">Author</th>
+						<th class="label">Year</th>
+						<th class="label">Action</th>
+					</tr>
+					<?php 
+						foreach($listBooks as $key => $value)
+						{
+							$id=$value->getId();
+							$name =$value->getName();
+							$author =$value->getAuthor();
+							$year =$value->getYear();
+							?>
+							<tr>
+								<td class="value"><?= $id ?></td>
+								<td class="value"><?= $name; ?></td>
+								<td class="value"><?= $author; ?></td>
+								<td class="value"><?= $year; ?></td>
+								<td style="text-align: center;">
+									<a href="?action=edit&id=<?= $id ?>" style='margin-right: 44px;'><i class='far fa-edit fa-lg'></i></a>
+									<a href="?action=delete&id=<?= $id ?>"><i class='far fa-trash-alt fa-lg'></i></a>
+								</td>
+							</tr>
+					<?php 
+						}
+						?>
+				</table>
+				<div id="del-all" style="display: none;" class="add-div">
+					<button class="add-button" style="width: 122px" ><i class="fas fa-trash fa-lg"></i><span class="tag-name">Xóa tất cả</span></button>
+				</div>
+				
 			</div>
 		</div>
     </div>
